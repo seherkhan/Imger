@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">ImgerApp</string>
+    <string name="gallery_action">Search</string>
+    <string name="gallery_filesize">By Filesize</string>
+    <string name="gallery_date">By Date</string>
+    <string name="gallery_tag">By Keywords</string>
+    <string name="gallery_action_sort">Sort</string>
+    <string name="view_metadata">Metadata</string>
+    <string name="edit_tags">Edit Keywords</string>
+    <string name="edit_labels">Edit Labels</string>
+    <string name="filename">File Name</string>
+    <string name="dir">Directory</string>
+    <string name="type">File Type</string>
+    <string name="size">File Size</string>
+    <string name="imagedate">Image Date (YYYY-MM-DD hh:mm:ss)</string>
+    <string name="createdon">Created On</string>
+    <string name="filesize">File Size (MB)</string>
+    <string name="imgdim">Image Dimensions (w x l)</string>
+    <string name="model">Model</string>
+    <string name="focallen">Focal Length in 35mm format</string>
+    <string name="shutter">Shutter Speed</string>
+    <string name="fnum">F-number</string>
+    <string name="iso">ISO</string>
+    <string name="gps">GPS</string>
+    <string name="tag">Keywords (comma separated)</string>
+    <string name="search_action">Apply</string>
+    <string name="paramDate">Date in range:</string>
+    <string name="paramFilesize">Filesize in range:</string>
+    <string name="paramTag">Contains keywords (OR):</string>
+    <string name="editTag">Edit Keywords (comma separated)</string>
+    <string name="includeNull">Include images where one or more of the specified search attribute(s) = Null</string>
+    <string name="download">Download link</string>
+    <string name="noLinkAvaliable">No download link available</string>
+</resources>

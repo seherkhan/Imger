@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".FilterOptionsActivity">
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="filter"
+        android:text="Apply"
+        app:layout_constraintBottom_toTopOf="@+id/scrollview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="80dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/metadata_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+          >
+            <TextView
+                android:id="@+id/lab_filesize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filesize"
+                android:textColor="@color/colorTextMedium" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/filesize_min"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="(min)"
+                    android:textColor="@color/colorTextLight"/>
+
+                <EditText
+                    android:id="@+id/filesize_max"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="(max)"
+                    android:textColor="@color/colorTextLight"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/lab_createdon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/createdon"
+                android:textColor="@color/colorTextMedium" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/createdon_min"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:hint="MM/DD/YYYY (min)"
+                    android:textColor="@color/colorTextLight"/>
+
+                <EditText
+                    android:id="@+id/createdon_max"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:hint="MM/DD/YYYY (max)"
+                    android:textColor="@color/colorTextLight"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/lab_imgdim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/imgdim"
+                android:textColor="@color/colorTextMedium" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="width: "
+                        android:textColor="@color/colorTextMedium" />
+                    <EditText
+                        android:id="@+id/w_min"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:hint="(min)"
+                        android:textColor="@color/colorTextLight"/>
+
+                    <EditText
+                        android:id="@+id/w_max"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:hint="(max)"
+                        android:textColor="@color/colorTextLight"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="length: "
+                        android:textColor="@color/colorTextMedium" />
+                    <EditText
+                        android:id="@+id/l_min"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:hint="(min)"
+                        android:textColor="@color/colorTextLight"/>
+
+                    <EditText
+                        android:id="@+id/l_max"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:hint="(max)"
+                        android:textColor="@color/colorTextLight"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/lab_focallen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/focallen"
+                android:textColor="@color/colorTextMedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/focal_min"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="(min)"
+                    android:textColor="@color/colorTextLight"/>
+
+                <EditText
+                    android:id="@+id/focal_max"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="(max)"
+                    android:textColor="@color/colorTextLight"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lab_shutter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shutter"
+                android:textColor="@color/colorTextMedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/s_min"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="(min)"
+                    android:textColor="@color/colorTextLight"/>
+
+                <EditText
+                    android:id="@+id/s_max"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="(max)"
+                    android:textColor="@color/colorTextLight"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lab_fnum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fnum"
+                android:textColor="@color/colorTextMedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/f_min"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="(min)"
+                    android:textColor="@color/colorTextLight"/>
+
+                <EditText
+                    android:id="@+id/f_max"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="(max)"
+                    android:textColor="@color/colorTextLight"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lab_iso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/iso"
+                android:textColor="@color/colorTextMedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/iso_min"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:hint="(min)"
+                    android:textColor="@color/colorTextLight"/>
+
+                <EditText
+                    android:id="@+id/iso_max"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:hint="(max)"
+                    android:textColor="@color/colorTextLight"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lab_gps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gps"
+                android:textColor="@color/colorTextMedium" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="lat (N): "
+                        android:textColor="@color/colorTextMedium" />
+                    <EditText
+                        android:id="@+id/gps_latN_min"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:hint="(min)"
+                        android:textColor="@color/colorTextLight"/>
+
+                    <EditText
+                        android:id="@+id/gps_latN_max"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:hint="(max)"
+                        android:textColor="@color/colorTextLight"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="long (E): "
+                        android:textColor="@color/colorTextMedium" />
+                    <EditText
+                        android:id="@+id/gps_longE_min"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:hint="(min)"
+                        android:textColor="@color/colorTextLight"/>
+
+                    <EditText
+                        android:id="@+id/gps_longE_max"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:hint="(max)"
+                        android:textColor="@color/colorTextLight"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lab_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag"
+                android:textColor="@color/colorTextMedium" />
+
+            <EditText
+                android:id="@+id/tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textColor="@color/colorTextLight"
+                />
+
+            <CheckBox
+                android:id="@+id/includeNull"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/includeNull"
+                android:checked="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

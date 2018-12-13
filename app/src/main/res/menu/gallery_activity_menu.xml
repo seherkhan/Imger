@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".GalleryActivity">
+    <!--item
+        android:id="@+id/gallery_action_sort"
+        android:title="@string/gallery_action_sort"
+        app:showAsAction="always" /-->
+    <item
+        android:id="@+id/gallery_filesize"
+        android:title="@string/gallery_filesize"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/gallery_date"
+        android:title="@string/gallery_date"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/gallery_tag"
+        android:title="@string/gallery_tag"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/gallery_action"
+        android:title="@string/gallery_action"
+        app:showAsAction="always" />
+</menu>
